@@ -48,7 +48,7 @@ const ncharts = new NxNodeEcharts({
 const b64 = ncharts.getDataURL();
 const filename = './test/outputs/' + index + '.html';
 fs.writeFileSync(filename, `<img src="${b64}" width="1000" height="500" />`);
-echarts.dispose();
+ncharts.dispose();
 
 // OR you can call original echarts/node-canvas api:
 // ncharts.chart.balblax
