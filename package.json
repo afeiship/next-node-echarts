@@ -26,6 +26,7 @@
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
     "jest": "^23.6.0",
+    "rake-git": "github:afeiship/rake-git",
     "yargs": "^4.7.1"
   },
   "dependencies": {
