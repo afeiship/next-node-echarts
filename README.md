@@ -54,6 +54,8 @@ ncharts.dispose();
 // ncharts.chart.balblax
 // ncharts.canvas.balblay
 ```
+## docs
+- https://afeiship.github.io/next-node-echarts/
 
 ## resources
 - https://github.com/lmk123/blog/issues/61
