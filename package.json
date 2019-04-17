@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "jest",
+    "test": "node test/test.js",
     "start": "node build/server.js",
     "version": "gulp bump"
   },
