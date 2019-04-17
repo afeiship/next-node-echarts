@@ -16,7 +16,17 @@ npm install -S afeiship/next-node-echarts --registry=https://registry.npm.taobao
 ```js
 import NxNodeEcharts from 'next-node-echarts';
 
-// code goes here:
+// create nodeEcharts:
+const echarts = new NxNodeEcharts({
+  width: 1000,
+  heigth: 500,
+  option: item
+});
+
+const b64 = echarts.getDataURL();
+const filename = './test/outputs/' + index + '.html';
+fs.writeFileSync(filename, `<img src="${b64}" width="1000" height="500" />`);
+echarts.dispose();
 ```
 
 ## resources:
