@@ -30,4 +30,6 @@ echarts.dispose();
 ```
 
 ## resources:
-- https://github.com/afeiship
+- https://github.com/lmk123/blog/issues/61
+- https://echarts.baidu.com/option.html
+- https://github.com/Automattic/node-canvas

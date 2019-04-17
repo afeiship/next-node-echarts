@@ -1,4 +1,5 @@
 module.exports = {
+  backgroundColor:'#fff',
   title: {
     text: '堆叠区域图'
   },
