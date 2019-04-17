@@ -16,11 +16,33 @@ npm install -S afeiship/next-node-echarts --registry=https://registry.npm.taobao
 ```js
 import NxNodeEcharts from 'next-node-echarts';
 
+// example data:
+const option = {
+  title: {
+    text: 'test'
+  },
+  tooltip: {},
+  legend: {
+    data: ['test']
+  },
+  xAxis: {
+    data: ['a', 'b', 'c', 'd', 'f', 'g']
+  },
+  yAxis: {},
+  series: [
+    {
+      name: 'test',
+      type: 'bar',
+      data: [5, 20, 36, 10, 10, 20]
+    }
+  ]
+};
+
 // create nodeEcharts:
 const ncharts = new NxNodeEcharts({
   width: 1000,
   heigth: 500,
-  option: item
+  option: option
 });
 
 const b64 = ncharts.getDataURL();
