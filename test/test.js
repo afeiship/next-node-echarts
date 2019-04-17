@@ -16,8 +16,8 @@ items.forEach(function(item, index) {
   });
 
   var b64 = echarts.getDataURL();
-  fs.writeFileSync(
-    './test/outputs/' + index + '.html',
-    `<img src="${b64}" width="1000" height="500" />`
-  );
+  var filename = './test/outputs/' + index + '.html';
+  fs.writeFileSync(filename, `<img src="${b64}" width="1000" height="500" />`);
+  echarts.dispose();
+  console.log(`File created at: http://localhost:3000/outputs/${index}.html`);
 });
