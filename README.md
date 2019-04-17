@@ -1,18 +1,18 @@
 # next-node-echarts
 > Echarts for node
 
-## install:
+## install
 ```bash
 npm install -S afeiship/next-node-echarts --registry=https://registry.npm.taobao.org
 ```
 
-## apis:
+## apis
 | api        | params | description        |
 | ---------- | ------ | ------------------ |
 | getDataURL | -      | get base64 string. |
 | dispose    | -      | dispose resource   |
 
-## usage:
+## usage
 ```js
 import NxNodeEcharts from 'next-node-echarts';
 
@@ -27,9 +27,13 @@ const b64 = echarts.getDataURL();
 const filename = './test/outputs/' + index + '.html';
 fs.writeFileSync(filename, `<img src="${b64}" width="1000" height="500" />`);
 echarts.dispose();
+
+// OR you can call echarts/node-canvas api:
+// echarts.chart.balblax
+// echarts.canvas.balblay
 ```
 
-## resources:
+## resources
 - https://github.com/lmk123/blog/issues/61
 - https://echarts.baidu.com/option.html
 - https://github.com/Automattic/node-canvas
