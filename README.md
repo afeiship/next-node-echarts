@@ -7,10 +7,11 @@ npm install -S afeiship/next-node-echarts --registry=https://registry.npm.taobao
 ```
 
 ## apis
-| api        | params | description        |
-| ---------- | ------ | ------------------ |
-| getDataURL | -      | get base64 string. |
-| dispose    | -      | dispose resource   |
+| api        | params | description       |
+| ---------- | ------ | ----------------- |
+| getDataURL | -      | get base64 string |
+| toBuffer   | -      | get buffer        |
+| dispose    | -      | dispose resource  |
 
 ## usage
 ```js
