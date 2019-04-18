@@ -5,7 +5,7 @@ const echarts = require('echarts');
 // const options = require('./demo/bar');
 // const options = require('./demo/bubble');
 // const options = require('./demo/pie');
-const options = require('./demo/cn-font');
+const options = require('../data/area');
 console.time('t1');
 const canvas = createCanvas(1000, 500);
 console.timeEnd('t1');

@@ -11,6 +11,7 @@
     "build": "gulp",
     "test": "node test/test.js",
     "start": "node build/server.js",
+    "benchmark": "node test/example/benchmark.js",
     "version": "gulp bump"
   },
   "main": "dist/next-node-echarts.js",
