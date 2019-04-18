@@ -21,8 +21,11 @@
         this.chart = echarts.init(this.canvas, null, { devicePixelRatio: options.pixelRatio });
         this.chart.setOption(options.option);
       },
+      toBuffer: function() {
+        return this.chart.getDom().toBuffer();
+      },
       getDataURL: function(inType) {
-        var buff = this.chart.getDom().toBuffer();
+        var buff = this.toBuffer();
         var type = (inType || 'png').toLowerCase();
         return 'data:image/' + type + ';base64,' + Buffer.from(buff).toString('base64');
       },
