@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "canvas": "^2.4.1",
-    "echarts": "^4.2.1",
     "next-js-core2": "github:afeiship/next-js-core2"
   }
 }
