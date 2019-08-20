@@ -1,6 +1,6 @@
 {
   "name": "next-node-echarts",
-  "description": "Echarts for node",
+  "description": "Echarts for node.",
   "main": "dist/next-node-echarts.js",
   "authors": [
     "afei"

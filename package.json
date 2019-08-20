@@ -1,6 +1,6 @@
 {
   "name": "next-node-echarts",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Echarts for node.",
   "homepage": "https://github.com/afeiship/next-node-echarts",
   "author": {
@@ -9,29 +9,30 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "node test/test.js",
-    "start": "node build/server.js",
-    "benchmark": "node test/example/benchmark.js",
+    "test": "jest",
     "version": "gulp bump"
   },
   "main": "dist/next-node-echarts.js",
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.1",
-    "express": "^4.16.4",
-    "gulp": "^3.9.1",
-    "gulp-bump": "^2.7.0",
+    "gulp": "^4.0.2",
+    "gulp-bump": "^3.1.3",
     "gulp-concat": "^2.6.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-header": "^2.0.7",
+    "gulp-ignore": "^2.0.2",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^2.1.2",
     "jest": "^23.6.0",
-    "rake-git": "github:afeiship/rake-git",
+    "next-nice-comments": "github:afeiship/next-nice-comments",
+    "uglify-save-license": "^0.4.1",
     "yargs": "^4.7.1"
   },
   "dependencies": {
-    "canvas": "^2.4.1",
     "next-js-core2": "github:afeiship/next-js-core2"
   }
 }

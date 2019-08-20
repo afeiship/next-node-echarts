@@ -3,22 +3,29 @@
   var nx = global.nx || require('next-js-core2');
   var createCanvas = require('canvas').createCanvas;
   var echarts = require('echarts');
+  var ERR_MSG = 'Echarts must be import!';
   var DEFAULT_OPTIONS = {
     width: 1000,
     height: 500,
     pixelRatio: 2,
-    option: {}
+    option: {},
+    echarts: null
   };
-
-  // init node echarts:
-  echarts.setCanvasCreator(createCanvas);
 
   var NxNodeEcharts = nx.declare('nx.NodeEcharts', {
     methods: {
       init: function(inOptions) {
         var options = nx.mix(DEFAULT_OPTIONS, inOptions);
+        var echarts = options.echarts;
+        if (!echarts) {
+          nx.error(ERR_MSG);
+        }
+        echarts.setCanvasCreator(createCanvas);
+        this.echarts = echarts;
         this.canvas = createCanvas(options.width, options.height);
-        this.chart = echarts.init(this.canvas, null, { devicePixelRatio: options.pixelRatio });
+        this.chart = echarts.init(this.canvas, null, {
+          devicePixelRatio: options.pixelRatio
+        });
         this.chart.setOption(options.option);
       },
       toBuffer: function() {
