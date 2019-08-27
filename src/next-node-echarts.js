@@ -2,7 +2,6 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
   var createCanvas = require('canvas').createCanvas;
-  var echarts = require('echarts');
   var ERR_MSG = 'Echarts must be import!';
   var DEFAULT_OPTIONS = {
     width: 1000,
@@ -15,7 +14,7 @@
   var NxNodeEcharts = nx.declare('nx.NodeEcharts', {
     methods: {
       init: function(inOptions) {
-        var options = nx.mix(DEFAULT_OPTIONS, inOptions);
+        var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         var echarts = options.echarts;
         if (!echarts) {
           nx.error(ERR_MSG);
