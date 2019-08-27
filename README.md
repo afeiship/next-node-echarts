@@ -19,4 +19,4 @@ import NxNodeEcharts from 'next-node-echarts';
 ```
 
 ## resources
-- https://github.com/afeiship
+- https://github.com/Automattic/node-canvas
