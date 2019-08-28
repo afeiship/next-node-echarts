@@ -42,6 +42,8 @@ wrapFillText(ctx, 'TITLE:清晨醒来，打开窗帘，一抹慵懒的阳光照�
 
 ctx.font = '12px Impact';
 ctx.fillStyle = '#999';
+// ctx.canvas.style ="width:400px;height:175px";
+// ctx.scale(2, 2);
 wrapFillText(
   ctx,
   'DESC:清晨醒来，打开窗帘，一抹慵懒的阳光照进来，暖暖的，柔柔的，时光瞬间变得温婉静美，打开音乐，沏一杯花茶，躺在床上，暖阳淼淼，茶香淡淡，音乐袅袅，闭上眼睛，嘴角轻轻上扬，算是对着光阴的镜子，和自己撒个娇。',
@@ -55,7 +57,7 @@ wrapFillText(
 const img = new Image();
 img.onload = () => {
   console.log('on load.');
-  ctx.drawImage(img, 100, 110, 600, 300);
+  ctx.drawImage(img, 10, 110, 750, 375);
   const html = '<img src="' + canvas.toDataURL() + '" />';
   fs.writeFileSync('./dist/node-example.html', html);
   echarts.dispose();
