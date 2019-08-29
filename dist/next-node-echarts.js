@@ -2,7 +2,7 @@
  * name: next-node-echarts
  * url: https://github.com/afeiship/next-node-echarts
  * version: 1.0.0
- * date: 2019-08-20T11:37:54.683Z
+ * date: 2019-08-29T08:02:40.794Z
  * license: MIT
  */
 
@@ -10,7 +10,6 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
   var createCanvas = require('canvas').createCanvas;
-  var echarts = require('echarts');
   var ERR_MSG = 'Echarts must be import!';
   var DEFAULT_OPTIONS = {
     width: 1000,
@@ -23,7 +22,7 @@
   var NxNodeEcharts = nx.declare('nx.NodeEcharts', {
     methods: {
       init: function(inOptions) {
-        var options = nx.mix(DEFAULT_OPTIONS, inOptions);
+        var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         var echarts = options.echarts;
         if (!echarts) {
           nx.error(ERR_MSG);
